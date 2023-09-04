@@ -1,8 +1,24 @@
-.about-container{
-    padding: 4rem 12rem 1rem;
+.about-container {
+  padding: 4rem 12rem 1rem;
 }
 
-.about-head{
-    margin-bottom: 1rem;
-    text-align: center;
+.about-head {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+  .about-container {
+    padding: 0.4rem 3rem 1rem;
+  }
+
+  .about-head {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-container {
+    padding: 0.4rem 1.8rem 1rem;
+  }
 }

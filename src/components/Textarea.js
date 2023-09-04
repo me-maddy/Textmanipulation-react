@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./textarea.css";
 
 export default function Textarea({ showAlert }) {
   const [text, setMytext] = useState("");
@@ -9,9 +10,10 @@ export default function Textarea({ showAlert }) {
         e.target.parentElement.previousElementSibling.value.toUpperCase();
       setMytext(newText);
       showAlert("Text has been converted into upper-case!", "success");
-    }  else {
-      showAlert("Write something in the text box!" , "warning");
     }
+    //   else {
+    //   showAlert("Write something in the text box!" , "warning");
+    // }
   };
 
   const onLowerCase = (e) => {
@@ -20,18 +22,20 @@ export default function Textarea({ showAlert }) {
         e.target.parentElement.previousElementSibling.value.toLowerCase();
       setMytext(newText);
       showAlert("Text has been converted into lower-case!", "success");
-    }   else {
-      showAlert("Write something in the text box!" , "warning");
     }
+    //  else {
+    //   showAlert("Write something in the text box!" , "warning");
+    // }
   };
 
   const onClear = () => {
     if (text) {
       setMytext("");
       showAlert("Text has been deleted!", "success");
-    }  else {
-      showAlert("There is no text in the text box to clear!" , "warning");
     }
+    //  else {
+    //   showAlert("There is no text in the text box to clear!" , "warning");
+    // }
   };
 
   const handleChange = (e) => {
@@ -41,7 +45,7 @@ export default function Textarea({ showAlert }) {
 
   const handleSpeak = () => {
     if (text.split(" ").filter((element) => element !== "").length === 0) {
-      showAlert("There should have some text in the text box to speak!" , "warning");
+      // showAlert("There should have some text in the text box to speak!" , "warning");
       return;
     }
     const toggle = document.getElementById("toggle");
@@ -71,18 +75,15 @@ export default function Textarea({ showAlert }) {
       });
       setMytext(changeText.join(" "));
       showAlert("Text has been capitalised!", "success");
-    } else {
-      showAlert("Write something in the text box!" , "warning");
     }
+    //  else {
+    //   showAlert("Write something in the text box!" , "warning");
+    // }
   };
 
   return (
     <>
-      <h3
-        className="main-heading" 
-      >
-        Text Util Application
-      </h3>
+      <h3 className="main-heading">Text Util Application</h3>
       <div className="infoBox">
         <div className="main-container">
           <h3 className="infoHead">Here is your content :-</h3>
@@ -93,29 +94,56 @@ export default function Textarea({ showAlert }) {
             onChange={handleChange}
           ></textarea>
           <div className="btnBox">
-            <button className="actionBtn upper" onClick={onHandleUpperCase}>
+            <button
+              disabled={
+                text.split(" ").filter((element) => element !== "").length === 0
+              }
+              className="actionBtn upper"
+              onClick={onHandleUpperCase}
+            >
               UpperCase
             </button>
-            <button className="actionBtn lower" onClick={onLowerCase}>
+            <button
+              disabled={
+                text.split(" ").filter((element) => element !== "").length === 0
+              }
+              className="actionBtn lower"
+              onClick={onLowerCase}
+            >
               LowerCase
             </button>
-            <button className="actionBtn clear" onClick={onClear}>
+            <button
+              disabled={
+                text.split(" ").filter((element) => element !== "").length === 0
+              }
+              className="actionBtn clear"
+              onClick={onClear}
+            >
               Clear
             </button>
             <button
+              disabled={
+                text.split(" ").filter((element) => element !== "").length === 0
+              }
               className="actionBtn speak"
               id="toggle"
               onClick={handleSpeak}
             >
               Speak
             </button>
-            <button className="actionBtn capital" onClick={handleCapital}>
+            <button
+              disabled={
+                text.split(" ").filter((element) => element !== "").length === 0
+              }
+              className="actionBtn capital"
+              onClick={handleCapital}
+            >
               Capitalise
             </button>
           </div>
         </div>
         <div className="summaryBox">
-          <h2>Your Text Summary:-</h2>
+          <h2>Your Text Summary :-</h2>
           <li>
             {text.split(" ").filter((element) => element !== "").length} words
             and{" "}

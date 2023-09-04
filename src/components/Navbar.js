@@ -4,10 +4,9 @@ import "./Navbar.css";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
-export default function Navbar({alert , showAlert}) {
-  const headings = ["Home", "About", "Contact", "Help"];
+export default function Navbar({ alert, showAlert }) {
+  const headings = ["home", "about"];
   const [isChecked, setIsChecked] = useState(false);
-  
 
   const handleOnChange = () => {
     setIsChecked(!isChecked);
@@ -52,7 +51,7 @@ export default function Navbar({alert , showAlert}) {
         <h3 className="text-heading">TextUtils</h3>
         <ul className="linkBox">
           {headings.map((heading, index) => (
-            <List keyId={index} heading={heading} />
+            <List key={index} heading={heading} />
           ))}
         </ul>
         <div className="themeBox">
@@ -65,8 +64,8 @@ export default function Navbar({alert , showAlert}) {
           <label htmlFor="dark-mode" className="toggleBox"></label>
         </div>
       </nav>
-      <Alert alert={alert}/> 
-      <Outlet/>
+      <Alert alert={alert} />
+      <Outlet />
     </>
   );
 }

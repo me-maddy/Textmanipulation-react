@@ -23,8 +23,9 @@ h3 {
 
 .linkBox {
   display: flex;
-  justify-content: space-between;
-  width: 40vw;
+  /* justify-content: space-between; */
+  width: 40%;
+  gap: 20%;
   margin: 0;
 }
 
@@ -49,6 +50,7 @@ h3 {
 .themeBox {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 100%;
 }
 
@@ -87,6 +89,16 @@ h3 {
 
 #dark-mode:checked ~ .toggleBox {
   background-color: rgba(0, 0, 0, 0.452);
+}
+
+.alertBox {
+  height: 60px;
+}
+
+.alertBox .alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #dark-mode {
@@ -186,4 +198,220 @@ h3 {
 .previewBox .preview-text {
   padding-left: 1.4rem;
   line-height: 25px;
+}
+
+/* ========================================
+==========> Responsive Degign <============
+=========================================== */
+
+@media screen and (max-width: 1050px) {
+  .navbar {
+    padding: 1rem 1.3rem 1rem 1rem;
+  }
+  .main-heading {
+    margin: 0.6rem 0;
+  }
+  .infoBox {
+    padding: 0.6rem 1.6rem;
+    margin-top: 2rem;
+    gap: 40px;
+  }
+
+  .infoBox .info {
+    font-size: 16px;
+  }
+
+  .summaryBox {
+    width: 38%;
+  }
+
+  .btnBox {
+    display: flex;
+    gap: 12px;
+    /* justify-content: space-around; */
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .actionBtn {
+    font-size: 16px;
+    margin-right: 0;
+  }
+
+  .previewBox {
+    padding: 1.4rem 1.8rem;
+  }
+
+  .previewBox .preview-text {
+    padding-left: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    padding: 12px;
+    height: 50px;
+  }
+
+  .text-heading {
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+  }
+
+  .linkBox {
+    padding: 0;
+  }
+
+  .linkBox .link a {
+    font-size: 1rem;
+  }
+
+  .themeBox .toggleBox {
+    width: 50px;
+    height: 25px;
+  }
+
+  .toggleBox::after {
+    width: 15px;
+    height: 15px;
+    left: 5px;
+    top: 5px;
+  }
+
+  #dark-mode:checked ~ .toggleBox:after {
+    left: 45px;
+  }
+
+  .alertBox {
+    height: 44px;
+  }
+
+  .alertBox .alert {
+    height: 40px;
+  }
+
+  .main-heading {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  .infoBox {
+    flex-direction: column;
+    padding: 0.6rem 1.6rem;
+    margin-top: 1rem;
+    gap: 30px;
+  }
+  .main-container {
+    width: 100%;
+  }
+
+  .infoHead {
+    font-size: 1.1rem;
+    font-weight: 100;
+  }
+
+  .infoBox .info {
+    font-size: 15px;
+  }
+
+  .btnBox {
+    display: flex;
+    gap: 12px;
+    /* justify-content: space-around; */
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .actionBtn {
+    margin-right: 0;
+    font-size: 15px;
+  }
+
+  .summaryBox {
+    width: 100%;
+  }
+
+  .summaryBox h2 {
+    font-size: 18px;
+  }
+
+  .summaryBox li {
+    padding: 0.2rem 0.3rem 0.3rem;
+    font-size: 14px;
+    margin-left: 0.2rem;
+  }
+
+  .previewBox {
+    margin: 0;
+    padding: 1rem 1.6rem;
+    font-size: 14px;
+  }
+
+  .previewBox .preview-head {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .previewBox .preview-text {
+    padding-left: 0.6rem;
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .navbar {
+    padding: 8px;
+    height: 50px;
+  }
+
+  .text-heading {
+    font-size: 1rem;
+  }
+
+  .linkBox .link a {
+    font-size: 0.9rem;
+  }
+
+  .themeBox .toggleBox {
+    width: 45px;
+    height: 22px;
+  }
+
+  .toggleBox::after {
+    width: 14px;
+    height: 14px;
+    left: 4px;
+    top: 4px;
+  }
+
+  #dark-mode:checked ~ .toggleBox:after {
+    left: 41px;
+  }
+
+  .infoBox {
+    padding: 0.5rem 1rem;
+  }
+
+  .infoHead {
+    font-size: 1rem;
+  }
+
+  .infoBox .info {
+    font-size: 14px;
+  }
+
+  .actionBtn {
+    font-size: 14px;
+  }
+
+  .previewBox {
+    padding: 1rem 1rem;
+  }
+
+  .previewBox .preview-text {
+    padding-left: 0.4rem;
+  }
 }

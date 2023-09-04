@@ -1,0 +1,6 @@
+.actionBtn:disabled{
+    background-color: rgb(132, 132, 221);
+    color: rgb(233, 233, 233);
+    cursor: default;
+    box-shadow: none;
+}
