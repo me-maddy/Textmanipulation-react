@@ -6,8 +6,8 @@
 
 .navbar {
   display: flex;
-  /* background-color: #a5a5a5;  */
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
+  color: red;
   justify-content: space-between;
   width: 100%;
   align-items: center;
@@ -23,7 +23,6 @@ h3 {
 
 .linkBox {
   display: flex;
-  /* justify-content: space-between; */
   width: 40%;
   gap: 20%;
   margin: 0;
@@ -113,7 +112,6 @@ h3 {
   width: 100%;
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
   justify-content: space-between;
 }
 
@@ -148,26 +146,6 @@ h3 {
   cursor: pointer;
   background-color: blue;
 }
-
-/* .btnBox .upper {
-  background-color: blue;
-}
-
-.btnBox .lower {
-  background-color: purple;
-}
-
-.btnBox .speak {
-  background-color: green;
-}
-
-.btnBox .capital {
-  background-color: brown;
-}
-
-.btnBox .clear {
-  background-color: red;
-} */
 
 .btnBox .actionBtn:hover {
   box-shadow: 0px 0px 0px grey;
@@ -228,7 +206,6 @@ h3 {
   .btnBox {
     display: flex;
     gap: 12px;
-    /* justify-content: space-around; */
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
@@ -318,7 +295,6 @@ h3 {
   .btnBox {
     display: flex;
     gap: 12px;
-    /* justify-content: space-around; */
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
