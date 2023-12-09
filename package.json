@@ -1,6 +1,6 @@
 {
   "homepage": "https://me-maddy.github.io/Textmanipulation-react",
-  "name": "my-app",
+  "name": "text-utils",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

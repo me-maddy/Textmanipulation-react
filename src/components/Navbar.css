@@ -30,9 +30,10 @@ h3 {
 
 .linkBox .link {
   list-style: none;
+  font-size: 1.4rem;
 }
 
-.linkBox .link a {
+.linkBox .linkBox .link a {
   text-decoration: none;
   color: white;
   font-size: 1.4rem;
@@ -245,6 +246,10 @@ h3 {
     font-size: 1rem;
   }
 
+  .linkBox .link {
+    font-size: 1rem;
+  }
+
   .themeBox .toggleBox {
     width: 50px;
     height: 25px;
@@ -345,6 +350,10 @@ h3 {
 
   .text-heading {
     font-size: 1rem;
+  }
+
+  .linkBox .link {
+    font-size: 0.9rem;
   }
 
   .linkBox .link a {

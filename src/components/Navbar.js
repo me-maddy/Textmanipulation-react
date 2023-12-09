@@ -1,11 +1,11 @@
-import List from "./List";
+// import List from "./List";
 import Alert from "./Alert";
 import "./Navbar.css";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 export default function Navbar({ alert, showAlert }) {
-  const headings = ["home", "about"];
+  // const headings = ["home", "about"];
   const [isChecked, setIsChecked] = useState(false);
 
   const handleOnChange = () => {
@@ -49,10 +49,13 @@ export default function Navbar({ alert, showAlert }) {
         }
       >
         <h3 className="text-heading">TextUtils</h3>
-        <ul className="linkBox">
+        {/* <ul className="linkBox">
           {headings.map((heading, index) => (
             <List key={index} heading={heading} />
           ))}
+        </ul> */}
+        <ul className="linkBox">
+          <li className="link">Home</li>
         </ul>
         <div className="themeBox">
           <input
