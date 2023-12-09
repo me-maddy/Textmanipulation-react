@@ -22,10 +22,19 @@ export default function App() {
   return (
     <Router>
       <Routes>
-          <Route element={<Navbar alert={alert} showAlert={showAlert}/>}>
-            <Route exact path="/" element={<> <Textarea showAlert={showAlert}/> </>}/>
-            <Route exact path="/about" element={<About/>}/>
-          </Route>
+        <Route element={<Navbar alert={alert} showAlert={showAlert} />}>
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                {" "}
+                <Textarea showAlert={showAlert} />{" "}
+              </>
+            }
+          />
+          <Route exact path="/about" element={<About />} />
+        </Route>
       </Routes>
     </Router>
     // <>
